@@ -44,8 +44,6 @@ names(filtered_data)<-gsub("Gyro", "Gyroscope", names(filtered_data))
 names(filtered_data)<-gsub("Mag", "Magnitude", names(filtered_data))
 names(filtered_data)<-gsub("BodyBody", "Body", names(filtered_data))
 
-#str(filtered_data)
-
 library(plyr)
 #forming independent dataset to get aggregate of each subject during each activity
 Data_agg<-aggregate(. ~subject + activity, filtered_data, mean)
